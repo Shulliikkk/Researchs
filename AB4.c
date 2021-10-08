@@ -110,12 +110,15 @@ int main() {
     fprintf(f2, "%lf %lf\n", t, sqrt(r) - R);
 
     int i;
-    for (i = 0; i < 5; i++) x[i] = x[i + 1];
-    for (i = 0; i < 5; i++) y[i] = y[i + 1];
-    for (i = 0; i < 5; i++) vx[i] = vx[i + 1];
-    for (i = 0; i < 5; i++) vy[i] = vy[i + 1];
-    for (i = 0; i < 5; i++) ax[i] = ax[i + 1];
-    for (i = 0; i < 5; i++) ay[i] = ay[i + 1];
+    for (i = 0; i < 5; i++){
+      x[i] = x[i + 1];
+      y[i] = y[i + 1];
+      vx[i] = vx[i + 1];
+      vy[i] = vy[i + 1];
+      ax[i] = ax[i + 1];
+      ay[i] = ay[i + 1];
+    }
+  
   }
   system("python plotter.py");
 }
